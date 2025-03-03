@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+Sitemap: http://text_v2.ivanl.dev.oa-stuff.com/
