@@ -971,6 +971,7 @@ body {
 }
 @media (min-width: 768px) {
   .well__wraper {
+    padding: 46px 23px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
