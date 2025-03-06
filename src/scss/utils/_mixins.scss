@@ -15,7 +15,7 @@ $mobile-small: 320px;
 }
 
 @mixin desktop-small {
-  @media (max-width: $desktop-small) {
+  @media (min-width: $desktop-small) {
     @content;
   }
 }
@@ -51,5 +51,15 @@ $mobile-small: 320px;
     &:is(:hover, :focus, :active) {
       @content;
     }
+  }
+}
+
+.title {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 120%;
+  @include tablet() {
+    font-size: 40px;
   }
 }

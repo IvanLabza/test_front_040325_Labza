@@ -1,9 +1,13 @@
 .well {
   padding-top: 80px;
+  @include tablet() {
+    padding-top: 200px;
+  }
+  .container {
+    max-width: 1104px;
+  }
 }
 
-.well-title {
-}
 .well__wraper {
   padding: 24px 28px;
   border-radius: 40px;
@@ -11,13 +15,21 @@
   background: rgb(7, 7, 7);
   margin-top: 40px;
 
+  @include tablet-small() {
+    display: flex;
+    gap: 20px;
+  }
+
   ul {
     display: flex;
     flex-wrap: wrap;
     gap: 18px;
     margin-top: 24px;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    @include tablet-small() {
+      margin-top: unset;
+    }
   }
 
   li {
@@ -25,18 +37,30 @@
     border-radius: 20px;
     border: 1px solid rgb(255, 255, 255);
     max-width: 140px;
+    @include tablet {
+      max-width: 245px;
+      padding: 24px 16px;
+    }
 
     h4 {
       color: rgb(255, 255, 255);
       font-size: 16px;
       font-weight: 800;
       line-height: 120%;
+      @include tablet {
+        font-size: 28px;
+      }
     }
     p {
       color: rgb(255, 255, 255);
       font-size: 10px;
       font-weight: 400;
       line-height: 120%;
+      margin-top: 5px;
+      @include tablet {
+        font-size: 28px;
+        font-size: 16px;
+      }
     }
   }
 }
@@ -45,6 +69,12 @@
   border: 1px solid rgb(255, 255, 255);
   border-radius: 20px;
   background: rgb(26, 26, 26);
+
+  @include tablet() {
+    max-width: 480px;
+    padding-bottom: 84px;
+  }
+
   h3 {
     color: rgb(255, 255, 255);
     font-size: 20px;
@@ -52,6 +82,9 @@
     line-height: 140%;
     text-align: left;
     text-transform: capitalize;
+    @include tablet() {
+      font-size: 40px;
+    }
   }
   P {
     color: rgb(255, 255, 255);
@@ -59,5 +92,9 @@
     font-weight: 400;
     line-height: 120%;
     margin-top: 18px;
+    @include tablet() {
+      margin-top: 87px;
+      font-size: 16px;
+    }
   }
 }

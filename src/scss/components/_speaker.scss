@@ -1,11 +1,12 @@
 .speaker {
   padding-top: 80px;
-}
-.speaker-title {
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 29px;
+  @include tablet() {
+    padding-top: 200px;
+  }
+
+  .container {
+    max-width: 1064px;
+  }
 }
 .speaker__wrapper {
   .swiper-container {
@@ -14,31 +15,54 @@
       padding: 40px 20px;
       border-radius: 40px;
       background: rgb(226, 230, 238);
+      display: flex;
+      flex-direction: column;
+      @include tablet() {
+        flex-direction: row;
+        gap: 40px;
+        padding: 50px;
+      }
     }
   }
 }
+
+.wraps {
+  position: relative;
+  z-index: 8;
+}
 .speaker__wrap {
   padding: 40px 35px;
-  position: relative;
-  z-index: 5;
   border: 1.5px solid rgb(0, 0, 0);
   border-radius: 16px;
-  backdrop-filter: blur(44px);
+  //   backdrop-filter: blur(44px);
   background: rgb(249, 250, 252);
   margin-top: 20px;
 
-  &::before {
+  &::after {
     content: '';
     position: absolute;
     display: block;
     left: -4px;
-    bottom: -5px;
+    bottom: 120px;
     border-radius: 20px;
-    width: 104%;
+    width: calc(100% + 8px);
     height: 127px;
-    z-index: 1;
-    backdrop-filter: blur(44px);
+    z-index: -1;
+    // backdrop-filter: blur(44px);
     background: rgb(0, 0, 0);
+    @include mobile() {
+      bottom: 85px;
+    }
+    @include tablet-small() {
+      bottom: 150px;
+    }
+    @include tablet() {
+      height: 150px;
+      bottom: 190px;
+    }
+    @include desktop-small() {
+      bottom: 160px;
+    }
   }
 
   h3 {
@@ -46,6 +70,9 @@
     font-size: 14px;
     font-weight: 800;
     line-height: 120%;
+    @include tablet-small {
+      font-size: 28px;
+    }
   }
   p {
     color: rgb(88, 84, 84);
@@ -53,6 +80,10 @@
     font-weight: 400;
     line-height: 120%;
     margin-top: 4px;
+
+    @include tablet-small {
+      font-size: 18px;
+    }
   }
 }
 
@@ -64,6 +95,9 @@
   align-items: center;
   margin-top: 15px;
   margin-bottom: 25px;
+  @include tablet-small {
+    margin-top: 58px;
+  }
   li {
     color: rgb(0, 0, 0);
     font-size: 10px;
@@ -75,6 +109,10 @@
     border-radius: 28px;
     background: rgb(255, 255, 255);
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    @include tablet-small {
+      font-size: 18px;
+    }
   }
   .active {
     color: rgb(255, 255, 255);

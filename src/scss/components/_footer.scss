@@ -1,0 +1,124 @@
+.footer {
+  color: rgb(255, 255, 255);
+  border-radius: 72px 72px 0px 0px;
+  padding: 36px;
+  background: rgb(0, 0, 0);
+  .container {
+    @include tablet() {
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+    }
+  }
+  .footer-subtext {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+
+    @include tablet() {
+      font-size: 16px;
+      margin-top: 94px;
+    }
+  }
+
+  @include tablet() {
+    padding: 40px 100px;
+  }
+}
+
+.footer__logo {
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 17px;
+  display: flex;
+  gap: 7px;
+
+  @include tablet() {
+    font-size: 20px;
+  }
+}
+.footer-text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  max-width: 253px;
+  margin-top: 28px;
+
+  @include tablet() {
+    font-size: 16px;
+    margin-top: 34px;
+    max-width: 393px;
+  }
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 26px;
+  @include tablet() {
+    margin-bottom: unset;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+
+    @include tablet() {
+      font-size: 20px;
+    }
+  }
+  a {
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    @include tablet() {
+      font-size: 16px;
+    }
+  }
+}
+.footer__wrapper__contact {
+  margin-top: 20px;
+  @include tablet() {
+    margin: unset;
+    margin-bottom: 117px;
+  }
+  a {
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
+    align-items: center;
+    @include tablet() {
+      font-size: 16px;
+    }
+  }
+}
+.footer__wrapper_policy {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  @include tablet() {
+    flex-direction: row;
+  }
+}
+
+.mob {
+  display: block;
+  @include tablet() {
+    display: none;
+  }
+}
+
+.desc {
+  display: none;
+  @include tablet() {
+    display: block;
+  }
+}

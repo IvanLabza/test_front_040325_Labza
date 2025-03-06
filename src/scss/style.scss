@@ -2,9 +2,9 @@
 
 @import './vendors/reset';
 
-@import './utils/var';
 @import './utils/mixins';
 @import './utils/slider';
+@import './utils/var';
 
 // glob
 
@@ -17,5 +17,7 @@
 @import './components/well';
 
 @import './components/speaker';
+
+@import './components/footer';
 
 //component

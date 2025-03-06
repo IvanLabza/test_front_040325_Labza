@@ -5,8 +5,12 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 20px;
+    @include tablet() {
+      justify-content: center;
+    }
   }
 }
+
 
 .menu-container {
   position: fixed;
@@ -24,6 +28,14 @@
   padding-top: 20px;
   padding-left: 16px;
   border-radius: 0px 24px 24px 0px;
+
+  @include tablet() {
+    position: static;
+    width: unset;
+    height: unset;
+    background: unset;
+    flex-direction: row;
+  }
 }
 
 .menu-container.active {
@@ -36,6 +48,12 @@
   margin: 0;
   text-align: left;
 
+  @include tablet() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   li {
     margin: 20px 0;
 
@@ -45,6 +63,10 @@
       font-weight: 600;
       line-height: 120%;
       padding: 8px 12px;
+      @include tablet() {
+        color: #fff;
+        font-size: 18px;
+      }
     }
   }
 }
@@ -54,6 +76,9 @@
   background: none;
   border: none;
   cursor: pointer;
+  @include tablet() {
+    display: none;
+  }
 }
 
 #active-link {
@@ -63,6 +88,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @include tablet() {
+    color: #000;
+    background-color: #fff;
+  }
 
   &::after {
     content: '';
@@ -71,6 +100,9 @@
     width: 20px;
     height: 20px;
     margin-left: 7px;
+    @include tablet() {
+      display: none;
+    }
   }
 }
 
@@ -81,7 +113,10 @@
   line-height: 29px;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 7px;
+  @include tablet() {
+    display: none;
+  }
   &-menu {
     color: #000;
   }

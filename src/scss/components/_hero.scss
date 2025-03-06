@@ -1,6 +1,25 @@
 .hero {
   padding-top: 45px;
   padding-bottom: 41px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include tablet() {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+    }
+  }
+
+  @include tablet() {
+    padding-bottom: 133px;
+    padding-top: 142px;
+  }
 }
 .hero-title {
   color: rgb(255, 255, 255);
@@ -10,6 +29,12 @@
   text-align: center;
   max-width: 305px;
   margin: 0 auto;
+  @include tablet-small() {
+    font-size: 40px;
+    text-align: left;
+    max-width: 511px;
+    margin: unset;
+  }
 }
 .hero-text {
   color: rgb(178, 178, 178);
@@ -20,16 +45,46 @@
   margin: 0 auto;
   margin-top: 20px;
   max-width: 285px;
+
+  @include tablet-small() {
+    font-size: 18px;
+    text-align: left;
+    max-width: 484px;
+    margin: unset;
+    margin-top: 20px;
+  }
 }
 .hero-img {
   display: block;
   margin: 0 auto;
   margin-top: 41px;
+  @include tablet-small() {
+    width: 100%;
+    margin-top: unset;
+  }
 }
 .hero-subimg {
   display: block;
   margin: 0 auto;
   margin-top: 41px;
+  @include tablet() {
+    width: 60%;
+    margin: unset;
+  }
+}
+
+.hero_cont {
+  @include tablet() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    max-width: 405px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+  }
 }
 .hero-subtext {
   color: rgb(178, 178, 178);
@@ -41,9 +96,14 @@
   margin: 0 auto;
   max-width: 285px;
   margin-top: 13px;
+  @include tablet() {
+    max-width: 205px;
+    font-size: 16px;
+    margin: unset;
+    text-align: left;
+  }
 }
 .hero-btn {
-  display: block;
   color: rgb(0, 0, 0);
   font-size: 18px;
   font-weight: 600;
@@ -53,6 +113,10 @@
   background: rgb(255, 255, 255);
   margin: 0 auto;
   margin-top: 38px;
+  @include tablet() {
+    margin: unset;
+    margin-top: 80px;
+  }
 }
 
 .hero__wrap {
@@ -70,5 +134,26 @@
   .hero-img {
     position: relative;
     z-index: 99;
+  }
+}
+
+.hero__subwrapper {
+  width: 40%;
+  position: relative;
+}
+
+.hero-btn-desc {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.hero-btn-mob {
+  display: block;
+
+  @include tablet {
+    display: none;
   }
 }

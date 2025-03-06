@@ -9,12 +9,20 @@
 
     .slide {
       position: relative;
-      display: block;
       float: left;
-      max-width: 300px;
+      width: 300px;
       height: auto;
       @include mobile() {
-        max-width: 500px;
+        width: 500px;
+      }
+      @include tablet-small() {
+        width: 700px;
+      }
+      @include tablet() {
+        width: 900px;
+      }
+      @include desktop-small() {
+        width: 1064px;
       }
     }
   }
@@ -24,6 +32,7 @@ span {
   &.control_prev,
   &.control_next {
     cursor: pointer;
+    padding: 2px;
     transition: all 0.2s ease;
   }
 }
@@ -44,4 +53,8 @@ span {
   bottom: 30px;
   right: 50%;
   transform: translateX(50%);
+  @include tablet {
+    right: 30%;
+    font-size: 14px;
+  }
 }

@@ -1,5 +1,10 @@
-const autoplay = false;
-const time = 7000;
+let autoplay = false;
+const time = 8000;
+
+
+// if (window.innerWidth >= 765) {
+//   autoplay = true;
+// }
 
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.slider').forEach(slider => {
@@ -25,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     `;
     slider.appendChild(indicator);
 
-    slider.style.maxWidth = slideWidth + 'px';
+    slider.style.width = slideWidth + 'px';
     sliderUl.style.width = slideCount * slideWidth + 'px';
     sliderUl.style.display = 'flex';
     sliderUl.style.transition = 'transform 0.3s ease-in-out';
