@@ -1,3 +1,31 @@
-:root{
-  
+:root {
+}
+
+.none {
+  display: none;
+}
+
+body {
+  font-family: Jost;
+}
+
+.head-hero-wrap {
+  background-image: url('/images/head_bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0px 0px 72px 72px;
+}
+
+.beckdrop {
+  position: relative;
+  z-index: 99;
+  background-color: rgba(68, 68, 68, 0.7);
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+
+.container {
+  max-width: 1920px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
