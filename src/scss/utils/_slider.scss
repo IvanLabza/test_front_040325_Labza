@@ -77,8 +77,18 @@ span {
 
 .control_prev {
   margin-right: 10px;
+  background-image: url(/images/control_prev.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 6px;
+  height: 12px;
 }
 
 .control_next {
   margin-left: 10px;
+  background-image: url(/images/control_next.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 6px;
+  height: 12px;
 }
