@@ -497,8 +497,13 @@ p {
 .slider .swiper-container .slide {
   position: relative;
   float: left;
-  width: 300px;
+  width: 280px;
   height: auto;
+}
+@media (min-width: 350px) {
+  .slider .swiper-container .slide {
+    width: 320px;
+  }
 }
 @media (min-width: 576px) {
   .slider .swiper-container .slide {
@@ -515,7 +520,7 @@ p {
     width: 900px;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1150px) {
   .slider .swiper-container .slide {
     width: 1064px;
   }
@@ -523,7 +528,7 @@ p {
 
 span.control_prev, span.control_next {
   cursor: pointer;
-  padding: 2px;
+  padding: 3px;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
@@ -551,6 +556,14 @@ span.control_prev, span.control_next {
     right: 30%;
     font-size: 14px;
   }
+}
+
+.control_prev {
+  margin-right: 10px;
+}
+
+.control_next {
+  margin-left: 10px;
 }
 
 .none {
@@ -668,14 +681,19 @@ body {
   }
 }
 .head__nav__list li {
-  margin: 20px 0;
+  margin-top: 20px;
+}
+@media (min-width: 992px) {
+  .head__nav__list li {
+    margin-top: unset;
+    margin-right: 40px;
+  }
 }
 .head__nav__list li a {
   color: rgb(0, 0, 0);
   font-size: 20px;
   font-weight: 600;
   line-height: 120%;
-  padding: 8px 12px;
 }
 @media (min-width: 992px) {
   .head__nav__list li a {
@@ -710,9 +728,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 8px 12px;
 }
 @media (min-width: 992px) {
   #active-link {
+    padding: 8px 32px;
     color: #000;
     background-color: #fff;
   }
@@ -1159,7 +1179,7 @@ body {
     bottom: 190px;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1150px) {
   .speaker__wrap::after {
     bottom: 160px;
   }
@@ -1325,7 +1345,7 @@ body {
             transform: translateX(22%);
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1150px) {
   .study .slider-indicator {
     bottom: 80px;
     right: 40%;

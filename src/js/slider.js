@@ -1,5 +1,5 @@
 let autoplay = false;
-const time = 8000;
+const time = 5000;
 
 if (window.innerWidth >= 765) {
   autoplay = true;
@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const indicator = document.createElement('div');
     indicator.classList.add('slider-indicator');
     indicator.innerHTML = `
-      <span class="control_prev"> < </span>
+      <span class="control_prev"> <img src="./images/control_prev.png" /> </span>
       <span class="current">${currentIndex}</span> / 
       <span class="total">${slideCount}</span>
-      <span class="control_next"> > </span>
+      <span class="control_next"> <img  src="./images/control_next.png"/> </span>
     `;
     slider.appendChild(indicator);
 

@@ -10,8 +10,12 @@
     .slide {
       position: relative;
       float: left;
-      width: 300px;
+      width: 280px;
       height: auto;
+
+      @include mobile-small() {
+        width: 320px;
+      }
       @include mobile() {
         width: 500px;
       }
@@ -32,7 +36,7 @@ span {
   &.control_prev,
   &.control_next {
     cursor: pointer;
-    padding: 2px;
+    padding: 3px;
     transition: all 0.2s ease;
   }
 }
@@ -57,4 +61,12 @@ span {
     right: 30%;
     font-size: 14px;
   }
+}
+
+.control_prev {
+  margin-right: 10px;
+}
+
+.control_next {
+  margin-left: 10px;
 }

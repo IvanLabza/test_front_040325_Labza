@@ -11,7 +11,6 @@
   }
 }
 
-
 .menu-container {
   position: fixed;
   top: 0;
@@ -55,14 +54,17 @@
   }
 
   li {
-    margin: 20px 0;
+    margin-top: 20px;
+    @include tablet() {
+      margin-top: unset;
+      margin-right: 40px;
+    }
 
     a {
       color: rgb(0, 0, 0);
       font-size: 20px;
       font-weight: 600;
       line-height: 120%;
-      padding: 8px 12px;
       @include tablet() {
         color: #fff;
         font-size: 18px;
@@ -88,7 +90,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 8px 12px;
   @include tablet() {
+    padding: 8px 32px;
     color: #000;
     background-color: #fff;
   }
