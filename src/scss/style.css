@@ -681,7 +681,7 @@ body {
   }
 }
 .head__nav__list li {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 @media (min-width: 992px) {
   .head__nav__list li {
