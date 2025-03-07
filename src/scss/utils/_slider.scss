@@ -36,7 +36,6 @@ span {
   &.control_prev,
   &.control_next {
     cursor: pointer;
-    padding: 3px;
     transition: all 0.2s ease;
   }
 }
@@ -60,6 +59,10 @@ span {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  div {
+    display: flex;
+    align-items: center;
+  }
   @include tablet {
     bottom: 69px;
     right: 32%;

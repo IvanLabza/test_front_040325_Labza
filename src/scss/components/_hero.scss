@@ -7,6 +7,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
     @include tablet() {
       display: flex;
       flex-direction: row;
@@ -66,9 +67,9 @@
 .hero-subimg {
   display: block;
   margin: 0 auto;
+  width: 35%;
   margin-top: 41px;
   @include tablet() {
-    width: 60%;
     margin: unset;
   }
 }
@@ -138,8 +139,11 @@
 }
 
 .hero__subwrapper {
-  width: 40%;
+  width: 60%;
   position: relative;
+  @include tablet (){
+    margin-bottom: 20px;
+  }
 }
 
 .hero-btn-desc {
