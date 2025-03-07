@@ -57,11 +57,12 @@
       bottom: 150px;
     }
     @include tablet() {
-      height: 150px;
-      bottom: 190px;
+      height: 170px;
+      bottom: 270px;
     }
     @include desktop-small() {
-      bottom: 160px;
+      height: 160px;
+      bottom: 290px;
     }
   }
 

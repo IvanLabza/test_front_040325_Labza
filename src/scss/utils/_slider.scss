@@ -57,10 +57,22 @@ span {
   bottom: 30px;
   right: 50%;
   transform: translateX(50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   @include tablet {
-    right: 30%;
+    bottom: 69px;
+    right: 32%;
+    transform: translateX(32%);
     font-size: 14px;
   }
+}
+
+.current {
+  margin-right: 4px;
+}
+.total {
+  margin-left: 4px;
 }
 
 .control_prev {

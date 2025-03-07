@@ -1,15 +1,23 @@
 document.addEventListener('click', e => {
-  const option = e.target.closest('li'); 
-  if (!option || !option.parentElement.classList.contains('slide__option'))
-    return; 
+  const option = e.target.closest('li');
+  if (!option) return;
 
-  const list = option.parentElement; 
+  const list = option.closest('.slide__option');
+  if (!list) return;
 
-  list.querySelectorAll('li').forEach(el => el.classList.remove('active')); 
+  // Убираем активный класс у всех элементов внутри этого списка
+  list.querySelectorAll('li').forEach(el => el.classList.remove('active'));
 
-  option.classList.add('active'); 
+  // Добавляем активный класс кликнутому элементу
+  option.classList.add('active');
 
-  const slide = option.closest('.slide'); 
-  const title = slide.querySelector('.speaker__wrap-title');
-  title.textContent = option.textContent; 
+  // Находим соответствующий слайд
+  const slide = option.closest('.slide');
+  if (!slide) return;
+
+  // Обновляем заголовок внутри конкретного слайда
+  const title = slide.querySelector('.slider__wrap-title');
+  if (title) {
+    title.textContent = option.textContent;
+  }
 });

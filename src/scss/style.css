@@ -550,12 +550,32 @@ span.control_prev, span.control_next {
   right: 50%;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media (min-width: 992px) {
   .slider-indicator {
-    right: 30%;
+    bottom: 69px;
+    right: 32%;
+    -webkit-transform: translateX(32%);
+            transform: translateX(32%);
     font-size: 14px;
   }
+}
+
+.current {
+  margin-right: 4px;
+}
+
+.total {
+  margin-left: 4px;
 }
 
 .control_prev {
@@ -1180,13 +1200,14 @@ body {
 }
 @media (min-width: 992px) {
   .speaker__wrap::after {
-    height: 150px;
-    bottom: 190px;
+    height: 170px;
+    bottom: 270px;
   }
 }
 @media (min-width: 1150px) {
   .speaker__wrap::after {
-    bottom: 160px;
+    height: 160px;
+    bottom: 290px;
   }
 }
 .speaker__wrap h3 {
