@@ -28,6 +28,7 @@
     margin-top: 24px;
     justify-content: center;
     align-items: stretch;
+
     @include tablet-small() {
       margin-top: unset;
     }
@@ -37,7 +38,10 @@
     padding: 24px 12px;
     border-radius: 20px;
     border: 1px solid rgb(255, 255, 255);
-    max-width: 140px;
+    max-width: 100%;
+    @include mobile-small() {
+      max-width: 140px;
+    }
     @include tablet {
       max-width: 245px;
       padding: 24px 16px;

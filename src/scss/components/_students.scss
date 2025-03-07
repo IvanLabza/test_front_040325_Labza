@@ -1,0 +1,126 @@
+.students {
+  padding-top: 80px;
+  @include tablet() {
+    padding-top: 200px;
+  }
+
+  .container {
+    max-width: 1064px;
+  }
+}
+.students__wrapper {
+  .swiper-container {
+    margin-top: 28px;
+    .slide {
+      padding: 40px 20px;
+      border-radius: 40px;
+      background: rgb(226, 230, 238);
+      display: flex;
+      flex-direction: column;
+      @include tablet() {
+        flex-direction: row;
+        gap: 40px;
+        padding: 50px;
+      }
+    }
+  }
+}
+
+.wraps {
+  position: relative;
+  z-index: 8;
+}
+.students__wrap {
+  padding: 40px 35px;
+  border: 1.5px solid rgb(0, 0, 0);
+  border-radius: 16px;
+  //   backdrop-filter: blur(44px);
+  background: rgb(249, 250, 252);
+  margin-top: 20px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: -4px;
+    bottom: 120px;
+    border-radius: 20px;
+    width: calc(100% + 8px);
+    height: 127px;
+    z-index: -1;
+    // backdrop-filter: blur(44px);
+    background: rgb(0, 0, 0);
+    @include mobile() {
+      bottom: 85px;
+    }
+    @include tablet-small() {
+      bottom: 150px;
+    }
+    @include tablet() {
+      height: 170px;
+      bottom: 270px;
+    }
+    @include desktop-small() {
+      height: 160px;
+      bottom: 290px;
+    }
+  }
+
+  h3 {
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 120%;
+    @include tablet-small {
+      font-size: 28px;
+    }
+  }
+  p {
+    color: rgb(88, 84, 84);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 120%;
+    margin-top: 4px;
+
+    @include tablet-small {
+      font-size: 18px;
+    }
+  }
+}
+
+.slide__option {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  @include tablet-small {
+    margin-top: 58px;
+  }
+  li {
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 120%;
+    padding: 6px 16px;
+    box-sizing: border-box;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 28px;
+    background: rgb(255, 255, 255);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    @include tablet-small {
+      font-size: 18px;
+    }
+  }
+  .active {
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+  }
+}
+.control_next {
+}
+.control_prev {
+}
