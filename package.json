@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/",
+    "build": "vite build --base=/test_front_040325_Labza/",
     "prev": "vite preview"
   },
   "devDependencies": {

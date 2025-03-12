@@ -1,9 +1,9 @@
 let autoplay = false;
 const time = 5000;
 
-if (window.innerWidth >= 765) {
-  autoplay = true;
-}
+// if (window.innerWidth >= 765) {
+//   autoplay = true;
+// }
 
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.slider').forEach(slider => {
@@ -23,14 +23,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const indicator = document.createElement('div');
     indicator.classList.add('slider-indicator');
     indicator.innerHTML = `
-      <div>
+      <div class="prev__wrapper">
       <span class="control_prev"></span>
       <span class="current">${currentIndex}</span>
       </div>
       
       <span class="slesh" id="slesh"> / </span>
       
-      <div>
+      <div class="next__wrapper">
       <span class="total">${slideCount}</span>
       <span class="control_next"></span>
       </div>
@@ -106,6 +106,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Отключаем свайпы при нажатии на кнопки
     slider.addEventListener('touchstart', e => {
       if (e.target.closest('.slide__option')) {
+        isSwipeAllowed = false; // Если свайп начался на кнопке, блокируем свайп
+      } else if (e.target.closest('.slider-indicator')) {
+        isSwipeAllowed = false; // Если свайп начался на кнопке, блокируем свайп
+      } else if (e.target.closest('.program__submenu-button')) {
         isSwipeAllowed = false; // Если свайп начался на кнопке, блокируем свайп
       } else {
         isSwipeAllowed = true;

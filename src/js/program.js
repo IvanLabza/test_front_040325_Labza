@@ -3,8 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const text = nav.querySelector('.slesh');
   text.textContent = ' ';
 
-    text.addEventListener('click', () => {
-    
-        
+  text.addEventListener('click', () => {
+    const subMenu = document.querySelector('.program__submenu');
+
+    subMenu.classList.toggle('none');
+
+    subMenu
+      .querySelector('.program__submenu-button')
+      .addEventListener('click', () => {
+        subMenu.classList.add('none');
+        nav.querySelector('.slider-indicator').classList.toggle('toogle');
+      });
   });
 });

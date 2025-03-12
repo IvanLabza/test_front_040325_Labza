@@ -43,3 +43,17 @@ body {
     display: block;
   }
 }
+
+.title {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 120%;
+  @include mobile() {
+    display: block;
+    margin: 0 auto;
+  }
+  @include tablet() {
+    font-size: 40px;
+  }
+}
