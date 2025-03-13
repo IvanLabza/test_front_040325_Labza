@@ -7,12 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const subMenu = document.querySelector('.program__submenu');
 
     subMenu.classList.toggle('none');
+    nav.querySelector('.slider-indicator').classList.toggle('toogle');
 
     subMenu
       .querySelector('.program__submenu-button')
       .addEventListener('click', () => {
         subMenu.classList.add('none');
-        nav.querySelector('.slider-indicator').classList.toggle('toogle');
+        nav.querySelector('.slider-indicator').classList.remove('toogle');
       });
   });
 });

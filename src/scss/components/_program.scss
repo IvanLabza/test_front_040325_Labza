@@ -90,7 +90,7 @@
 
   .slider-indicator {
     background: rgb(7, 7, 7);
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 0 0 10px 10px;
     border: transparent;
     outline: transparent;
@@ -98,8 +98,7 @@
     max-height: 20px;
     max-width: 225px;
     mix-blend-mode: color-burn;
-
-    .toogle {
+    &.toogle {
       &::before,
       &::after {
         content: '';
@@ -275,7 +274,7 @@
 
 .program__submenu {
   position: absolute;
-  top: 706px;
+  top: 705px;
   right: 50%;
   z-index: 999;
   transform: translateX(50%);
@@ -302,6 +301,11 @@
   flex-direction: column;
   min-width: 290px;
   max-width: 466px;
+  // background-image: url(/images/Union.png);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // mix-blend-mode: color-burn;
 }
 
 .program__submenu__item {
@@ -309,4 +313,71 @@
   border: 1px solid rgb(7, 7, 7);
   border-radius: 16px;
   background: rgb(249, 250, 252);
+  h3 {
+    color: rgb(7, 7, 7);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 120%;
+    @include tablet() {
+      font-size: 22px;
+    }
+  }
+
+  p {
+    color: rgb(88, 84, 84);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 120%;
+    margin-top: 8px;
+    @include tablet() {
+      font-size: 14px;
+    }
+  }
+
+  h4 {
+    color: rgb(7, 7, 7);
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 120%;
+    margin-top: 12px;
+    @include tablet() {
+      font-size: 16px;
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    margin-top: 10px;
+    @include tablet() {
+    }
+    li {
+      color: rgb(255, 255, 255);
+      font-family: Poppins;
+      font-size: 6px;
+      font-weight: 500;
+      line-height: 12px;
+      border: 1px solid rgb(7, 7, 7);
+      border-radius: 28px;
+      background: rgb(7, 7, 7);
+      padding: 6px 16px;
+      @include tablet() {
+        font-size: 12px;
+        padding: 8px 20px;
+      }
+    }
+  }
+}
+
+.program__submenu-button {
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 40px;
+  background: rgb(249, 250, 252);
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 120%;
 }

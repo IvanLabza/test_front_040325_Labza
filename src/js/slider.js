@@ -1,9 +1,9 @@
 let autoplay = false;
 const time = 5000;
 
-// if (window.innerWidth >= 765) {
-//   autoplay = true;
-// }
+if (window.innerWidth >= 765) {
+  autoplay = true;
+}
 
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.slider').forEach(slider => {

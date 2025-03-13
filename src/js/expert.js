@@ -1,5 +1,5 @@
 document.querySelectorAll('.expert_btn').forEach(el => {
-  el.addEventListener('click', () => {
+  el.addEventListener('click', (e) => {
     const items = document.querySelectorAll('.expert__wrap__list li');
 
     items.forEach(item => {
