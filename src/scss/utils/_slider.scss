@@ -10,7 +10,7 @@
     .slide {
       position: relative;
       float: left;
-      width: 280px;
+      width: 290px;
       height: auto;
 
       @include mobile-small() {
@@ -93,4 +93,33 @@ span {
   background-size: contain;
   width: 6px;
   height: 12px;
+}
+
+.slider__statusbar {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 50px;
+
+  .slider_bar {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.bar {
+  width: 6px;
+  height: 6px;
+  display: block;
+  border-radius: 50%;
+  background: rgb(146, 146, 146);
+  transition: all 0.3s ease-in-out;
+
+  &-active {
+    width: 10px;
+    height: 10px;
+    background: rgb(0, 0, 0);
+  }
 }

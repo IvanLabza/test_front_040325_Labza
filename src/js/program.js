@@ -1,19 +1,30 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const nav = document.querySelector('.program__nav');
-  const text = nav.querySelector('.slesh');
-  text.textContent = ' ';
+class ProgramNavigation {
+  constructor() {
+    this.nav = document.querySelector('.program__nav');
+    this.text = this.nav.querySelector('.slesh');
+    this.subMenu = document.querySelector('.program__submenu');
+    this.sliderIndicator = this.nav.querySelector('.slider-indicator');
+    this.subMenuButton = this.subMenu.querySelector('.program__submenu-button');
+    this.init();
+  }
 
-  text.addEventListener('click', () => {
-    const subMenu = document.querySelector('.program__submenu');
+  init() {
+    document.addEventListener('DOMContentLoaded', () => {
+      this.text.textContent = ' ';
+      this.text.addEventListener('click', this.toggleSubMenu.bind(this));
+    });
+  }
 
-    subMenu.classList.toggle('none');
-    nav.querySelector('.slider-indicator').classList.toggle('toogle');
+  toggleSubMenu() {
+    this.subMenu.classList.toggle('none');
+    this.sliderIndicator.classList.toggle('toogle');
+    this.subMenuButton.addEventListener('click', this.closeSubMenu.bind(this));
+  }
 
-    subMenu
-      .querySelector('.program__submenu-button')
-      .addEventListener('click', () => {
-        subMenu.classList.add('none');
-        nav.querySelector('.slider-indicator').classList.remove('toogle');
-      });
-  });
-});
+  closeSubMenu() {
+    this.subMenu.classList.add('none');
+    this.sliderIndicator.classList.remove('toogle');
+  }
+}
+
+const programNav = new ProgramNavigation();
