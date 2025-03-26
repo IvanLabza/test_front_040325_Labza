@@ -123,3 +123,12 @@ span {
     background: rgb(0, 0, 0);
   }
 }
+
+// .slide {
+//   @include tablet-small() {
+//     &:first-child {
+//       width: 70%;
+//       margin: 0 auto;
+//     }
+//   }
+// }

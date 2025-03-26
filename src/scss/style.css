@@ -1358,6 +1358,19 @@ body {
   background: rgb(0, 0, 0);
 }
 
+@media (min-width: 576px) {
+  .speaker_slider-img {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1150px) {
+  .speaker_slider-img {
+    max-width: 100%;
+    margin: unset;
+  }
+}
+
 .study {
   padding-top: 80px;
 }
@@ -2603,7 +2616,6 @@ body {
   letter-spacing: 0%;
   margin-top: 8px;
 }
-
 @media (min-width: 1150px) {
   .rate__list {
     display: -webkit-box;

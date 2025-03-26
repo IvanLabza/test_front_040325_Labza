@@ -199,25 +199,25 @@ new Slider({
 
 new Slider({
   selector: '.study__slider',
-  autoplay: true,
+  autoplay: false,
   time: 10000,
 });
 
 new Slider({
   selector: '.students__wrapper',
-  autoplay: true,
+  autoplay: false,
   time: 10000,
 });
 
 new Slider({
   selector: '.program__wrapper',
-  autoplay: true,
+  autoplay: false,
   time: 10000,
 });
 
 new Slider({
   selector: '.rate__slider',
-  autoplay: true,
+  autoplay: false,
   time: 10000,
   minDesktopWidth: 1150,
   stopSlider: true,

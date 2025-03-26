@@ -120,7 +120,15 @@
     background: rgb(0, 0, 0);
   }
 }
-.control_next {
-}
-.control_prev {
+
+
+.speaker_slider-img {
+  @include mobile() {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  @include desktop-small(){
+    max-width: 100%;
+    margin: unset;
+  }
 }
